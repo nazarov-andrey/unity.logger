@@ -7,5 +7,6 @@ namespace Redspell.Logging
 	{
 		string Id { get; }
 		Color32 Color { get; }
+		bool Enabled { get; }
 	}
 }

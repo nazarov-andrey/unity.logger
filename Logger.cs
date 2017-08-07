@@ -38,9 +38,10 @@ namespace Redspell.Logging {
 			return defaultTagProvider.DefaultTag;
 		}
 
-		private bool IsTagLoggable (string tag)
+		private bool IsTagLoggable (string tagId)
 		{
-			bool isTabLoggable = System.Array.Exists (tags, x => x.Id == tag);
+			ITag tag = System.Array.Find (tags, x => x.Id == tagId);
+			bool isTabLoggable = tag != null && tag.Enabled;
 			return isTabLoggable;
 		}
 
