@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{4A4EB54B-9E5C-4FA2-9668-0CB4639EC59C}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CommonLogger</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ILogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SilentLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConsoleLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ITagFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDefaultTagProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConsoleTag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ITag.cs" />
+  </ItemGroup>
+</Project>

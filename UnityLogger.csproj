@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1924506F-38D3-486D-A575-E382BBC74E0D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>unity.logger</RootNamespace>
-    <AssemblyName>unity.logger</AssemblyName>
+    <RootNamespace>UnityLogger</RootNamespace>
+    <AssemblyName>UnityLogger</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -14,7 +14,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>DEBUG;UNITY_EDITOR</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -34,10 +34,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ITagFormatter.cs" />
+    <Compile Include="UnityLogger.cs" />
     <Compile Include="ITag.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="IDefaultTagProvider.cs" />
+    <Compile Include="ITagFormatter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -45,5 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Libs\UnityEngine.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="CommonLogger\CommonLogger.csproj">
+      <Project>{00CAAA9C-5611-4642-8081-147411A3AAFE}</Project>
+      <Name>CommonLogger</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
